@@ -222,12 +222,12 @@ public final class CameraManager {
         height = MIN_FRAME_HEIGHT;
       } else if (height > MAX_FRAME_HEIGHT) {
         height = MAX_FRAME_HEIGHT;
-      }*/
+      }
       if (height>width){
         height = width;
       }else{
         width = height;
-      }
+      }*/
       int leftOffset = (screenResolution.x - width) / 2;
       int topOffset = (screenResolution.y - height) / 2;
       framingRect = new Rect(leftOffset, topOffset, leftOffset + width, topOffset + height);
