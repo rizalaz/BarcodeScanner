@@ -219,10 +219,10 @@
             <string name="msg_default_format">Format</string>
             <string name="msg_default_meta">Metadata</string>
             <string name="msg_default_mms_subject">Hi</string>
-            <string name="msg_default_status">Place a barcode inside the viewfinder rectangle to scan it.</string>
+            <string name="msg_default_status">恦拻 浘涀缹 湹渵焲 榎, 鋱 嶴憝 醳鏻鐆.</string>
             <string name="msg_default_time">Time</string>
             <string name="msg_default_type">Type</string>
-            <string name="msg_encode_contents_failed">恦拻 浘涀缹 湹渵焲 榎, 鋱 嶴憝 醳鏻鐆.</string>
+            <string name="msg_encode_contents_failed">Could not encode a barcode from the data provided.</string>
             <string name="msg_google_books">Google Books</string>
             <string name="msg_google_product">Google Product Search</string>
             <string name="msg_google_shopper_missing">Google Shopper is not installed</string>
