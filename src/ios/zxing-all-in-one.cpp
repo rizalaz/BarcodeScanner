@@ -7940,7 +7940,8 @@ namespace zxing {
 
     Ref<Result> OneDReader::decode(Ref<BinaryBitmap> image, DecodeHints hints) {
       Ref<Result> result = doDecode(image, hints);
-        if (result.empty() && hints.getTryHarder() && image->isRotateSupported()) {
+      //i change here
+      /*if (result.empty() && hints.getTryHarder() && image->isRotateSupported()) {
         Ref<BinaryBitmap> rotatedImage(image->rotateCounterClockwise());
         result = doDecode(rotatedImage, hints);
         if (!result.empty()) {
@@ -7956,13 +7957,14 @@ namespace zxing {
           result.putMetadata(ResultMetadataType.ORIENTATION, new Integer(orientation));
           */
           // Update result points
-          std::vector<Ref<ResultPoint> >& points (result->getResultPoints());
+          //and here
+          /*std::vector<Ref<ResultPoint> >& points (result->getResultPoints());
           int height = rotatedImage->getHeight();
           for (size_t i = 0; i < points.size(); i++) {
             points[i].reset(new OneDResultPoint(height - points[i]->getY() - 1, points[i]->getX()));
           }
         }
-      }
+      }*/
       if (result.empty()) {
         throw ReaderException("");
       }
