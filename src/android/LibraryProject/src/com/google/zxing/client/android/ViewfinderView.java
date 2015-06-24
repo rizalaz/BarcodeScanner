@@ -63,7 +63,7 @@ public final class ViewfinderView extends View {
   public ViewfinderView(Context context, AttributeSet attrs) {
     super(context, attrs);
 
-  fakeR = new FakeR(context);
+	fakeR = new FakeR(context);
 
     // Initialize these once for performance rather than calling them every time in onDraw().
     paint = new Paint(Paint.ANTI_ALIAS_FLAG);
@@ -94,11 +94,8 @@ public final class ViewfinderView extends View {
     int height = canvas.getHeight();
 
     // Draw the exterior (i.e. outside the framing rect) darkened
-    final BufferedImage imhead = ImageIO.read(new File("qrheader.png"));
-
     paint.setColor(resultBitmap != null ? resultColor : maskColor);
     canvas.drawRect(0, 0, width, frame.top, paint);
-    canvas.drawImage(imhead, 0, 0, null);
     canvas.drawRect(0, frame.top, frame.left, frame.bottom + 1, paint);
     canvas.drawRect(frame.right + 1, frame.top, width, frame.bottom + 1, paint);
     canvas.drawRect(0, frame.bottom + 1, width, height, paint);

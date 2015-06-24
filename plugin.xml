@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.phonegap.plugins.barcodescanner"
-    version="2.2.0">
+    version="2.0.1">
 
     <name>BarcodeScanner</name>
     <description>You can use the BarcodeScanner plugin to scan different types of barcodes (using the device's camera) and get the metadata encoded in them for processing within your application.</description>
@@ -28,7 +28,6 @@
         </config-file>
 
         <resource-file src="src/ios/scannerOverlay.xib" />
-        <resource-file src="src/ios/CDVBarcodeScanner.bundle" />
 
         <header-file src="src/ios/zxing-all-in-one.h" />
 
@@ -40,9 +39,6 @@
         <framework src="AssetsLibrary.framework" />
         <framework src="CoreVideo.framework" />
         <framework src="QuartzCore.framework" />
-        <framework src="CoreGraphics.framework" />
-        <framework src="CoreImage.framework" />
-        <framework src="AudioToolbox.framework" />
     </platform>
 
     <!-- android -->
@@ -75,7 +71,7 @@
                 android:windowSoftInputMode="stateAlwaysHidden"
                 android:exported="false">
                 <intent-filter>
-                    <action android:name="com.google.zxing.client.android.SCAN"/>
+                    <action android:name="com.phonegap.plugins.barcodescanner.SCAN"/>
                     <category android:name="android.intent.category.DEFAULT"/>
                 </intent-filter>
             </activity>
@@ -219,7 +215,7 @@
             <string name="msg_default_format">Format</string>
             <string name="msg_default_meta">Metadata</string>
             <string name="msg_default_mms_subject">Hi</string>
-            <string name="msg_default_status">请扫描QR.</string>
+            <string name="msg_default_status">Place a barcode inside the viewfinder rectangle to scan it.</string>
             <string name="msg_default_time">Time</string>
             <string name="msg_default_type">Type</string>
             <string name="msg_encode_contents_failed">Could not encode a barcode from the data provided.</string>
